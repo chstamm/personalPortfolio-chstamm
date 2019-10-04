@@ -11,6 +11,14 @@ body {
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+#welcome-section h1{
+    font-size: 4rem;
+    margin: .5rem;
+}
+#welcome-section h2{
+    margin: 0;
+    font-size: 2rem;
+}
 #navbar {
     display: flex;
     justify-content: flex-end;
@@ -37,19 +45,38 @@ nav ul li a {
     padding: 1.20rem 1.5rem;
 }
 #navlist a:hover{
-    background: var;
+    background: var(--blue-greem);
 }
 
 #welcome-section {
     height: 100vh;
     width: 100%;
-    background-color: yellow;
+    background-color: var(--tan);
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+#projects{
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C6565;
+    color: var(--cream);
+
 }
 
-#projects-grid {
+#projects h2{
+    font-size: 2.5rem;
+    margin-bottom: 6rem;
+}
+
+.project-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
@@ -57,18 +84,52 @@ nav ul li a {
     max-width: 0 auto;
     margin-bottom: 6rem;
 }
+
+
+#contact {
+    background-color: var(--cream);
+    bottom: 0;
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact-head{
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+}
+#contact-head h1{
+    margin: 0;
+}
+
+#contact-links{
+    font-size: 1.5rem;
+    margin-top: 5rem;
+}
+#contact-links a{
+    padding: 3rem;
+    
+}
+footer {
+    padding: .5rem 2%;
+    text-align: center;
+    background-color: var(--tan);
+}
+
 @media (max-width: 75em) {
     html{
-        font-size: 60%;
+        font-size: 80%;
     }
 }
 @media (max-width: 28.75em) {
     html{
-        font-size: 58%;
+        font-size: 80%;
     }
 }
 @media (max-width: 28.75em) {
     html{
-        font-size:550%;
+        font-size:80%;
     }
 }
