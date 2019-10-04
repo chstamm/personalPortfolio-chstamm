@@ -15,15 +15,28 @@ body {
 #navlist {
     display: flex;
     justify-content: space-around;
-    width: 20%;
+    width: 300px;
 }
 nav ul li {
     list-style: none;
-    padding: .3rem;
-    margin-right: .6rem;
     font-size: 1.3rem;
+}
+a {
+    text-decoration: none;
+    Color: #f0f0f0;
+}
+#navlist a:hover{
+    background: orange;
 }
 
 #welcome-section {
     height: 100vh;
+    width: 100%;
+    background-color: yellow;
+}
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
 }
