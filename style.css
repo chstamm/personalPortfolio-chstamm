@@ -1,11 +1,15 @@
 :root {
-    --main-white: white;
-    --main-blue: blue; 
+    --coral: #DB595C;
+    --blue-greem: #2C6565;
+    --cream: #FCF6D9;
+    --tan: #DDC094;
+    --black: #150101;
 }
 
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 #navbar {
     display: flex;
@@ -13,7 +17,7 @@ body {
     position: fixed;
     top: 0;
     height: 3.75rem;
-    background: seagreen;
+    background: var(--coral);
     width: 100%;
 }
 
@@ -21,17 +25,19 @@ body {
     display: flex;
     justify-content: space-around;
     width: 300px;
+    margin-right: 1rem;
 }
 nav ul li {
     list-style: none;
     font-size: 1.3rem;
 }
-a {
+nav ul li a {
     text-decoration: none;
-    Color: #f0f0f0;
+    Color: var(--cream);
+    padding: 1.20rem 1.5rem;
 }
 #navlist a:hover{
-    background: orange;
+    background: var;
 }
 
 #welcome-section {
