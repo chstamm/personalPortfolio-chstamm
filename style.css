@@ -91,9 +91,10 @@ nav ul li a {
     color: var(--cream);
     flex-direction: column;
     align-items: center;
+    font-size: 1.5rem;
 }
 
-#contact {
+#contact { 
     background-color: var(--cream);
     bottom: 0;
     padding: 10rem 2rem;
