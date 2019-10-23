@@ -94,6 +94,11 @@ nav ul li a {
     font-size: 1.5rem;
 }
 
+#starWarsPoster {
+    height: 320px;
+    width: auto;
+}
+
 #contact { 
     background-color: var(--cream);
     bottom: 0;
@@ -118,6 +123,8 @@ nav ul li a {
 }
 #contact-links a{
     padding: 3rem;
+    text-decoration: none;
+    color: var(--black);
     
 }
 footer {
