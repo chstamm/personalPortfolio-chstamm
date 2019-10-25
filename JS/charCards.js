@@ -24,11 +24,14 @@ let mainArea = document.querySelector('main')
 
 people.forEach((person) => {
     let personDiv = document.createElement('div')
-    let name = document.createElement('h1')
+    let name = document.createElement('h3')
     let gender = document.createElement('p')
     let pic = document.createElement('img')
 
     let charNum = getCharNumber(person.url)
+
+    personDiv.setAttribute('class', 'charDivs')
+    pic.setAttribute('class', 'picDivs') 
 
     name.textContent = person.name
     gender.textContent = person.gender

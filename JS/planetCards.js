@@ -12,7 +12,8 @@ planets.forEach(planet => {
     let pic = document.createElement('img')
     let planetNum = getPlanetNumber(planet.url)
 
-    pic.setAttribute('class', 'picDivs') /* You can now style it in css with .picDivs */
+    planetDiv.setAttribute('class', 'planetDivs')
+    pic.setAttribute('class', 'picDivs') 
     
     name.textContent = planet.name
     climate.textContent = `Climate: ${planet.climate}`
@@ -45,7 +46,7 @@ function getPlanetNumber(planetURL) {
 const allDivs = Array.from(document.querySelectorAll('div'))
 const mainHeader = document.querySelector('header')
 let tempButton = document.createElement('button')
-tempButton.textContent = 'Temperate'
+tempButton.textContent = 'Temperate Climate'
 let tropButton = document.createElement('button')
 tropButton.textContent = 'Tropical Climate'
 mainHeader.appendChild(tempButton)

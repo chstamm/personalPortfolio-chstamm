@@ -1,15 +1,52 @@
+body {
+    margin: 2rem;
+    padding: 0;
+    background-color: rgb(18, 18, 26);;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+
+}
+
+h1, p {
+    margin: 0;
+    color: white;
+}
+h1 {
+    padding-bottom: .5rem;
+}
+
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 1rem;
     width: 100%;
     max-width: 0 auto;
     margin-bottom: 6rem;
 }
 
+.planetDivs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: rgb(48, 48, 68);
+    border-radius: 10% / 20%;
+}
+
+.picDivs {
+    padding-top: 1rem;
+    width: 70%;
+
+}
+
 button {
     font-size: 1.5rem;
-    border-radius: 10% / 50%;
+    border-radius: 1rem / 2rem;
     padding: 1rem;
-    background-color: seashell;
+    background-color: rgb(48, 48, 68);
+    color: white;
 }
