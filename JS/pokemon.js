@@ -10,7 +10,7 @@ try {
   }
     }
 
-const data = getPokemonData('https://pokeapi.co/api/v2/pokemon/')
+getPokemonData('https://pokeapi.co/api/v2/pokemon/')
 
 let mainArea = document.quierySelector(main)
 
