@@ -55,16 +55,27 @@ mainHeader.appendChild(tropButton)
 
 
 tempButton.addEventListener('click', () => {
-    tropPlanet.forEach(planets => {
+    //console.log(tempPlanet);
+   /*  tempPlanet.forEach(planets => {
         let matchedDiv = allDivs.find(oneDiv => {
-            return oneDiv.firstChild.textContent === planets.climate
+            console.log("oneDiv");
+            console.log(oneDiv);
+            console.log("textContent");
+            console.log(oneDiv.childNodes[1].childNodes[0].textContent);
+            console.log("oneDiv result");console.log(oneDiv.childNodes[1].childNodes[0].textContent.includes(planets.climate));    
+            return oneDiv.childNodes[1].childNodes[0].textContent.includes("temporate");
         })
         matchedDiv.setAttribute("style", "display: none;")
-    })
+    }) */
+    allDivs.forEach(thisDiv => {
+        if(!thisDiv.childNodes[1].childNodes[0].textContent.includes("temperate")){
+            thisDiv.setAttribute("style", "display: none;");
+        }
+    });
 })
 
 tropButton.addEventListener('click', () => {
-    tempPlanet.forEach(planets => {
+    tropPlanet.forEach(planets => {
         let matchedDiv = allDivs.find(oneDiv => {
             return oneDiv.firstChild.textContent === planets.climate
         }) 
