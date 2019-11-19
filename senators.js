@@ -4,7 +4,7 @@ async function getAPIdata(url) {
         const data = await response.json()
         return data
     } catch (error) {
-        console.error(error);
+        console.error(error)
     }
 }
 
@@ -17,7 +17,7 @@ const theData = getAPIdata('senators.json').then(data => {
 const container = document.querySelector('.container')
 
 function populateDom(senator_array) {
-    senator_array.foreach(senator)
+    senator_array.foreach(senator => {
     let card = document.createElement('div')
     card.setAttribute('class', 'card')
     let cardImage = document.createElement('div')
@@ -33,6 +33,7 @@ function populateDom(senator_array) {
     card.appendChild(cardImage)
     card.appendChild(cardContent(senator))
     container.appendChild(card)
+})
 }
 
 
