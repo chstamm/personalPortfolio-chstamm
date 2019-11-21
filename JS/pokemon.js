@@ -35,7 +35,7 @@ let mainArea = document.querySelector('main')
 
 function populateDOM(single_pokemon) {
     let pokeDiv = document.createElement('div')
-    let pokeInfo = document.createElement('h1')
+    let name = document.createElement('h1')
     let pic = document.createElement('img')
 
     pokeDiv.setAttribute('class', 'charDivs')
@@ -43,11 +43,12 @@ function populateDOM(single_pokemon) {
 
     let pokeNum = getPokeNumber(single_pokemon.id)
 
-    pokeInfo.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
+    name.textContent = single_pokemon.name
 
-    pic.src = `../images/${pokeNum}.png`
+    /* pic.src = `../images/${pokeNum}.png` */
+    pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
 
-    pokeDiv.appendChild(pokeInfo)
+    pokeDiv.appendChild(name)
     pokeDiv.appendChild(pic)
     mainArea.appendChild(pokeDiv)
 }
@@ -58,3 +59,13 @@ function getPokeNumber(id) {
         return `0${id}`
     } else return id
 }
+
+function nameUpper(name) {
+   return name.charAt(0).toUpperCase() + name.slice(1);
+} //how do I do this while being in the promise?
+
+
+
+
+
+
