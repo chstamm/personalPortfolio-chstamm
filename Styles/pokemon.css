@@ -18,7 +18,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 body{
     margin: 0;
-    max-width: 80rem;
+    padding: 0 2rem;
+    background-color: var(--l-grey);
 }
 
 header {
@@ -29,7 +30,7 @@ main {
     background-color: var(--l-grey);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 3rem;
     width: 100%;
     max-width: 0 auto;
     padding: 3rem;
