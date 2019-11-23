@@ -32,6 +32,7 @@ console.log(theData)
 
 // setting up the DOM
 
+let headerArea = document.querySelector('header')
 let mainArea = document.querySelector('main')
 
 function populateDOM(single_pokemon) {
@@ -41,10 +42,11 @@ function populateDOM(single_pokemon) {
     let frontInfo = document.createElement('div')
     let back = document.createElement('div')
     let backInfo = document.createElement('div')
-    let name = document.createElement('h1')
-    let pic = document.createElement('img')
+    /* let name = document.createElement('h1')
+    let pic = document.createElement('img') */
+    /* let headerPic = document.createElement('img') */
 
-    /* fillBack(back, single_pokemon) */
+
  
     scene.setAttribute('class', 'scene scene--card')
     card.setAttribute('class', 'card')
@@ -52,23 +54,24 @@ function populateDOM(single_pokemon) {
     frontInfo.setAttribute('class', 'front-info')
     back.setAttribute('class', 'back card__face')
     backInfo.setAttribute('class', 'back-info')
-    pic.setAttribute('class', 'pics')
+    /* headerPic.setAttribute('class', 'header-pic') */
 
-    let pokeNum = getPokeNumber(single_pokemon.id)
-
-    name.textContent = single_pokemon.name
-
-    /* pic.src = `../images/${pokeNuffm}.png` */
-    pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
-
-    frontInfo.appendChild(name)
-    frontInfo.appendChild(pic)
+  
     front.appendChild(frontInfo)
     back.appendChild(backInfo)
     scene.appendChild(card)
     card.appendChild(front)
     card.appendChild(back)
     mainArea.appendChild(scene)
+    /* headerArea.appendChild(headerPic) */
+
+    
+    fillFront(frontInfo, single_pokemon)
+    fillBack(backInfo, single_pokemon)
+
+
+    /* headerPic.src = '../images/pokeheader.png' */ 
+
 
     card.addEventListener( 'click', function() {
         card.classList.toggle('is-flipped');
@@ -76,11 +79,32 @@ function populateDOM(single_pokemon) {
 
 }
 
-function fillBack(back, data) {
-    let order = createElement('p')
-    order.textContent = data.order
-    back.appendChild(order)
+function fillFront(frontInfo, data ) {
+    let pic = document.createElement('img')
 
+    let pokeNum = getPokeNumber(data.id)
+    pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
+
+    frontInfo.appendChild(pic)
+
+    pic.setAttribute('class', 'pics')
+}
+
+function fillBack(backInfo, data) {
+    let name = document.createElement('h1')
+    let order = document.createElement('h1')
+    let HP = document.createElement('p')
+
+    order.textContent = `#${data.id} ${data.name[0].toUpperCase()}${data.name.slice(1)}`
+    HP.textContent = `HP: ${data.stats[5].base_stat}`
+
+    backInfo.appendChild(order)
+    backInfo.appendChild(name)
+    backInfo.appendChild(HP)
+
+    order.setAttribute('id', 'order')
+    backInfo.setAttribute('id', 'HP')
+    
 }
 
 function getPokeNumber(id) {
@@ -96,9 +120,3 @@ function getPokeNumber(id) {
 } */
 
  //how do I do this while being in the promise?
-
-
-
-
-
-
