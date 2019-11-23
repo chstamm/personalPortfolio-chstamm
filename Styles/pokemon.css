@@ -3,6 +3,7 @@
     --red: #e3350d;
     --orange: #ee6b2f;
     --yellow: #fecd01;
+    --d-yellow:#98863e;
     --green: #4dad5b;
     --l-blue: #30a7d6;
     --blue: #003d96;
@@ -16,8 +17,9 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- apply a natural box layout model to all elements --------------*/
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-p{
+p h1{
     margin: 0;
+    padding: 0;
 }
 
 body{
@@ -38,12 +40,11 @@ main {
 
 h1 {
     color: white;
-    padding-bottom: 1rem;
     font-family: 'Press Start 2P', cursive;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
 }
 
 .charDiv {
@@ -53,15 +54,19 @@ h1 {
 
 .front {
     margin: 0;
-    padding: 1rem;
+    padding: .8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-img {
+.pics {
     width: 100%;
     height: auto; 
+    background-color: var(--grey);
+    box-shadow: 10px 10px 50px;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .scene {
@@ -96,17 +101,20 @@ img {
   }
   
   .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--grey);
     border-radius: 10px;
   }
 
   .front-info {
-      padding: 1rem 2rem 1rem 2rem;
+     padding: 1rem 2rem 1rem 2rem;
   }
 
   .back-info{
       padding: 1rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-family: 'Press Start 2P', cursive;
       color: white;
   }

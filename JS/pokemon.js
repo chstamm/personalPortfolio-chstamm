@@ -6,6 +6,15 @@
 } */
 
 
+ class Pokemon {
+     constructor(id, name) {
+         this.id = id;
+         this.namd = name;
+     }
+ }
+
+ const random = new Pokemon(900, 'random')
+
 async function getAPIData(url) {
     try {
         const response = await fetch(url)
@@ -24,6 +33,7 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')
             getAPIData(pokemon.url)
                 .then(pokedata => {
                     populateDOM(pokedata)
+                    //populateDOM(random)
                 })
         }
     })
@@ -83,7 +93,7 @@ function fillFront(frontInfo, data ) {
     let pic = document.createElement('img')
 
     let pokeNum = getPokeNumber(data.id)
-    pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
+    pic.src = `../images/${pokeNum}.png`
 
     frontInfo.appendChild(pic)
 
@@ -93,14 +103,26 @@ function fillFront(frontInfo, data ) {
 function fillBack(backInfo, data) {
     let name = document.createElement('h1')
     let order = document.createElement('h1')
-    let HP = document.createElement('p')
+    //let baseXP = document.createElement('p')
+   // let HP = document.createElement('p')
+   // let speed = document.createElement('p')
+    //let attack = document.createElement('p')
+    //let defence = document.createElement('p')
+
 
     order.textContent = `#${data.id} ${data.name[0].toUpperCase()}${data.name.slice(1)}`
-    HP.textContent = `HP: ${data.stats[5].base_stat}`
+    //baseXP.textContent = `Base XP: ${data.abilities[2]}`
+    //HP.textContent = `HP: ${data.stats[5].base_stat}`
+    //speed.textContent = `Speed: ${data.stats[0].base_stat}`
+    //attack.textContent = `Attack: ${data.stats[4].base_stat}`
+    //defence.textContent = `Defence: ${data.stats[3].base_stat}`
 
     backInfo.appendChild(order)
     backInfo.appendChild(name)
-    backInfo.appendChild(HP)
+    //backInfo.appendChild(baseXP)
+    //backInfo.appendChild(HP)
+    //backInfo.appendChild(speed)
+    //backInfo.appendChild(attack)
 
     order.setAttribute('id', 'order')
     backInfo.setAttribute('id', 'HP')
