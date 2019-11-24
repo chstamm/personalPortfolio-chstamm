@@ -6,14 +6,14 @@
 } */
 
 
- class Pokemon {
+/*  class Pokemon {
      constructor(id, name) {
          this.id = id;
          this.name = name;
      }
  }
 
- const random = new Pokemon(900, 'random')
+ const random = new Pokemon(900, 'random') */
 
  const button = document.querySelector('#newPokemon')
  button.addEventListener('click', function(){
@@ -27,10 +27,22 @@
 }
 })
 
+/* async function getHP(pokeID) {
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeID}`).then(pokemon => {
+        const HP = pokemon.stats.find(element => {
+            return element.stat.name === "hp"
+        })
+        return HP.base_stat
+    })
+} */
+
 async function getAPIData(url) {
     try {
         const response = await fetch(url)
         const data = await response.json()
+        //console.log(data.id)
+        //const HP = await getHP(data.id)
+        //data.hp = HP
         return data
     } catch (error) {
         console.error(error)
@@ -64,8 +76,6 @@ function populateDOM(single_pokemon) {
     let frontInfo = document.createElement('div')
     let back = document.createElement('div')
     let backInfo = document.createElement('div')
-    /* let name = document.createElement('h1')
-    let pic = document.createElement('img') */
     /* let headerPic = document.createElement('img') */
 
 
@@ -125,6 +135,7 @@ function fillBack(backInfo, data) {
     order.textContent = `#${data.id} ${data.name[0].toUpperCase()}${data.name.slice(1)}`
     //baseXP.textContent = `Base XP: ${data.abilities[2]}`
     HP.textContent = `HP: ${data.stats[5].base_stat}`
+    //HP.textContent = data.hp
     speed.textContent = `Speed: ${data.stats[0].base_stat}`
     attack.textContent = `Attack: ${data.stats[4].base_stat}`
     defence.textContent = `Defence: ${data.stats[3].base_stat}`
