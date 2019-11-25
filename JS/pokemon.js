@@ -1,54 +1,67 @@
-// fetch API from https://pokeapi.co/
+ var pokeData = []
 
-/* async function getPokemonData(url) {
-    const response = await fetch(url)
-    return await response.json()
-} */
-
-
-/*  class Pokemon {
-     constructor(id, name) {
-         this.id = id;
-         this.name = name;
-     }
+ function renderAllCardsInDom(pokeData){
+     for (const pokemon of pokeData)
+     renderAllCardsInDom(pokemon.url)
  }
 
-
- const random = new Pokemon(900, 'random') */
-
-
- var pokeData = []
- 
- console.log(pokeData)
-
- const button = document.querySelector('#newPokemon')
- button.addEventListener('click', function(){
+ const newPokeButton = document.querySelector('#newPokemon')
+ newPokeButton.addEventListener('click', function(){
      let pokeID = prompt("Please enter a number for a new pokemon card!")
      if (pokeID > 0 && pokeID <= 807) {
      getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeID}`).then(result => {
-         populateDOM(result)
+        renderSinglePokemon(result)
      })
 } else {
     alert('Sorry! This number will not pull up a Pokemon.')
 }
 })
 
-/* async function getHP(pokeID) {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeID}`).then(pokemon => {
-        const HP = pokemon.stats.find(element => {
-            return element.stat.name === "hp"
-        })
-        return HP.base_stat
-    })
-} */
+const poisonButton = document.querySelector('#poison')
+poisonButton.addEventListener('click', function() {
+    renderAllPokemonWithFilter('poison')
+})
+const grassButton = document.querySelector('#grass')
+grassButton.addEventListener('click', function() {
+    renderAllPokemonWithFilter('grass')
+})
+const fireButton = document.querySelector('#fire')
+fireButton.addEventListener('click', function() {
+    renderAllPokemonWithFilter('fire')
+})
+const waterButton = document.querySelector('#water')
+waterButton.addEventListener('click', function() {
+    renderAllPokemonWithFilter('water')
+})
+const electricButton = document.querySelector('#electric')
+electricButton.addEventListener('click', function() {
+    renderAllPokemonWithFilter('electric')
+})
+const allButton = document.querySelector('#all')
+allButton.addEventListener('click', function() {
+    renderAllPokemonWithFilter('all')
+})
+
+function renderAllPokemonWithFilter(pokeType) {
+    if (pokeType === 'all') {
+        renderAllPokemon(pokeData)
+    } else {
+        let matchedPokemon = pokeData.filter(pokemon => {
+            for (type of pokemon.types) {
+                if (type.type.name === pokeType) {
+                    return true
+                }
+            }
+            return false
+        });
+        renderAllPokemon(matchedPokemon)
+    }
+}
 
 async function getAPIData(url) {
     try {
         const response = await fetch(url)
         const data = await response.json()
-        //console.log(data.id)
-        //const HP = await getHP(data.id)
-        //data.hp = HP
         return data
     } catch (error) {
         console.error(error)
@@ -56,17 +69,27 @@ async function getAPIData(url) {
 
 }
 
-
-/* const theData = */ getAPIData('https://pokeapi.co/api/v2/pokemon/')
-    .then(data => {
-        for (const pokemon of data.results) {
-            getAPIData(pokemon.url)
-                .then(pokedata => {
-                    populateDOM(pokedata)
-                    //populateDOM(random)
-                })
-        }
+getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=25')
+    .then(pokemonURLs => {
+        let promises = pokemonURLs.results.map(pokemon => getAPIData(pokemon.url))
+        Promise.all(promises).then(allData => {
+            pokeData = allData
+            renderAllPokemon(pokeData)
+        })
     })
+
+function renderAllPokemon(pokemon) {
+    let mainArea = document.querySelector('main')
+    while (mainArea.firstChild) {
+        mainArea.removeChild(mainArea.firstChild);
+    }
+    for (onePokemon of pokemon) {
+        renderSinglePokemon(onePokemon)
+    }
+    const totalHP = document.querySelector('#totalHP')
+    let totalledHP = pokemon.reduce((accumulator, currentPokemon) => accumulator + parseInt(currentPokemon.stats[5].base_stat, 10), 0)
+    totalHP.textContent = `Total HP: ${totalledHP}`
+}
 
  
 // setting up the DOM
@@ -74,7 +97,7 @@ async function getAPIData(url) {
 let headerArea = document.querySelector('header')
 let mainArea = document.querySelector('main')
 
-function populateDOM(single_pokemon) {
+function renderSinglePokemon(single_pokemon) {
     let scene = document.createElement('div')
     let card = document.createElement('div')
     let front = document.createElement('div')
