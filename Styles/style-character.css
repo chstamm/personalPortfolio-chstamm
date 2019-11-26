@@ -8,6 +8,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2rem;
+    height: 450px;
+    max-width: 100%;
 
 }
 
@@ -42,8 +44,6 @@ main {
     width: 70%;
 
 }
-
-
 
 button {
     font-size: 1.5rem;

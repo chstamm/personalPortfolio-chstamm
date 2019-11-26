@@ -17,6 +17,13 @@
 }
 })
 
+
+let mainHeader = document.querySelector('#header')
+    let headerPic = document.createElement('img')
+    headerPic.setAttribute('class', 'header-pic')
+    mainHeader.appendChild(headerPic) 
+    headerPic.src = '../images/pokeheader.png'
+ 
 const poisonButton = document.querySelector('#poison')
 poisonButton.addEventListener('click', function() {
     renderAllPokemonWithFilter('poison')
@@ -94,7 +101,6 @@ function renderAllPokemon(pokemon) {
  
 // setting up the DOM
 
-let headerArea = document.querySelector('header')
 let mainArea = document.querySelector('main')
 
 function renderSinglePokemon(single_pokemon) {
