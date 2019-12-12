@@ -29,7 +29,6 @@ planets.forEach(planet => {
     planetDiv.appendChild(climate)
     planetDiv.appendChild(terrain)
     planetDiv.appendChild(pic)
-
     mainArea.appendChild(planetDiv)
 });
 
@@ -55,18 +54,6 @@ mainHeader.appendChild(tropButton)
 
 
 tempButton.addEventListener('click', () => {
-    //console.log(tempPlanet);
-   /*  tempPlanet.forEach(planets => {
-        let matchedDiv = allDivs.find(oneDiv => {
-            console.log("oneDiv");
-            console.log(oneDiv);
-            console.log("textContent");
-            console.log(oneDiv.childNodes[1].childNodes[0].textContent);
-            console.log("oneDiv result");console.log(oneDiv.childNodes[1].childNodes[0].textContent.includes(planets.climate));    
-            return oneDiv.childNodes[1].childNodes[0].textContent.includes("temporate");
-        })
-        matchedDiv.setAttribute("style", "display: none;")
-    }) */
     allDivs.forEach(thisDiv => {
         if(!thisDiv.childNodes[1].childNodes[0].textContent.includes("temperate")){
             thisDiv.setAttribute("style", "display: none;");
@@ -75,28 +62,18 @@ tempButton.addEventListener('click', () => {
 })
 
 tropButton.addEventListener('click', () => {
-    tropPlanet.forEach(planets => {
-        let matchedDiv = allDivs.find(oneDiv => {
-            return oneDiv.firstChild.textContent === planets.climate
-        }) 
-        matchedDiv.setAttribute("style", "display: none;")
-    })
-})  
+    allDivs.forEach(thisDiv => {
+        if(!thisDiv.childNodes[1].childNodes[0].textContent.includes("tropical")){
+            thisDiv.setAttribute("style", "display: none;");
+        }
+    });
+}) 
 
 const tempPlanet = planets.filter(planet => planet.climate === 'temperate')
 const tropPlanet = planets.filter(planet => planet.climate === 'tropical')
 
 console.log(tempPlanet)
 console.log(tropPlanet)
-/* const otherCharacters = planets.filter(planets => planets.climate !== 'temporate' & 'tropical')  */
-
-
-/* const tempPlanet = planets.filter(planet => planet.climate === 'hot')
-const tempClimate = planets.filter(planet => planet.climate === 'frigid')
-const tempClimate = planets.filter(planet => planet.climate === 'polluted')
-const tempClimate = planets.filter(planet => planet.climate === 'arid')
-const tempClimate = planets.filter(planet => planet.climate === 'superheated')
-const tempClimate = planets.filter(planet => planet.climate === 'unknown') */
 
 
 
