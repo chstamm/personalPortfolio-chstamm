@@ -17,27 +17,28 @@ const theData = getAPIdata('senators.json').then(data => {
 const container = document.querySelector('.container')
 
 function populateDom(senator_array) {
-    senator_array.foreach(senator => {
-    let card = document.createElement('div')
-    card.setAttribute('class', 'card')
-    let cardImage = document.createElement('div')
-    cardImage.setAttribute('class', 'card-image')
-    let figure = document.createElement('figure')
-    figure.setAttribute('class', 'iamge')
-    let figureImage = document.createElement('img')
-    figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
-    figureImage.alt = 'Placeholder'
+    senator_array.forEach(senator => {
+        let card = document.createElement('div')
+        card.setAttribute('class', 'card')
+        let cardImage = document.createElement('div')
+        cardImage.setAttribute('class', 'card-image')
+        let figure = document.createElement('figure')
+        figure.setAttribute('class', 'iamge')
+        let figureImage = document.createElement('img')
+        figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
+        figureImage.alt = 'Placeholder'
 
-    figure.appendChild(figureImage)
-    cardImage.appendChild(figure)
-    card.appendChild(cardImage)
-    card.appendChild(cardContent(senator))
-    container.appendChild(card)
-})
+        figure.appendChild(figureImage)
+        cardImage.appendChild(figure)
+        card.appendChild(cardImage)
+        card.appendChild(cardContent(senator))
+        container.appendChild(card)
+
+    });
 }
 
 
-function cardContent(senator) {
+/* function cardContent(senator) {
     let cardContent = document.createElement('div')
     cardContent.setAttributre('class', 'card-content')
     let media = document.createElement('div')
@@ -65,4 +66,4 @@ function cardContent(senator) {
     media.appendChild(mediaContent)
     cardContent.appendChild(media)
     return cardContent
-}
+} */
