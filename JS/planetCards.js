@@ -72,8 +72,7 @@ tropButton.addEventListener('click', () => {
 const tempPlanet = planets.filter(planet => planet.climate === 'temperate')
 const tropPlanet = planets.filter(planet => planet.climate === 'tropical')
 
-console.log(tempPlanet)
-console.log(tropPlanet)
+
 
 
 
