@@ -48,8 +48,11 @@ let tempButton = document.createElement('button')
 tempButton.textContent = 'Temperate Climate'
 let tropButton = document.createElement('button')
 tropButton.textContent = 'Tropical Climate'
+let allButton = document.createElement('button')
+tempButton.textContent = 'All Climates'
 mainHeader.appendChild(tempButton)
 mainHeader.appendChild(tropButton)
+mainHeader.appendChild(allButton)
 
 
 
@@ -60,6 +63,14 @@ tempButton.addEventListener('click', () => {
         }
     });
 })
+
+tropButton.addEventListener('click', () => {
+    allDivs.forEach(thisDiv => {
+        if(!thisDiv.childNodes[1].childNodes[0].textContent.includes("tropical")){
+            thisDiv.setAttribute("style", "display: none;");
+        }
+    });
+}) 
 
 tropButton.addEventListener('click', () => {
     allDivs.forEach(thisDiv => {
