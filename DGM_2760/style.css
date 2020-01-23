@@ -1,0 +1,40 @@
+:root {
+    --coral: #DB595C;
+    --blue-greem: #2C6565;
+    --cream: #FCF6D9;
+    --tan: #DDC094;
+    --black: #150101;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    color: var(--cream);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.7)
+      ), url(Images/header_image.jpg) center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+header h1{
+    font-size: 4rem;
+    margin: .5rem;
+}
+header h2{
+    margin: 0;
+    font-size: 2rem;
+}
+
