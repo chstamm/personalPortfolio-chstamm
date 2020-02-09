@@ -8,11 +8,14 @@
     <title>Cozy Corner Book Store</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/44e07fc5b1.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <div class=fullPage>
+    <div id=fullPage1>
         <section id="topSection">
             <header>
                 <h1>Cozy Corner</h1>
@@ -38,15 +41,113 @@
             </nav>
         </section>
         <section id="heroSection">
-            <h1>Unlock Your Imagination</h1>
-            <h2>Come and open the doors to the worlds beyond our own</h2>
-            <button>
-                <ion-icon name="arrow-down"></ion-icon>
-            </button>
+            <div id=heroText>
+                <h1>Come and Unlock Your Imagination</h1>
+                <h2>Come and open the doors to the worlds beyond our own</h2>
+            </div>
+            <div id=heroArrow>
+                <a><i class="fas fa-angle-down"></i>
+                </a>
+            </div>
         </section>
-        
+
     </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <section id="booksGenre">
+        <button class="pageButton">
+            Popular Selections
+        </button>
+        <div id="tiles">
+            <figure class="genreTile">
+                <img src="images/fantasy1.jpg" alt="German Castle. Click to go to Fantasy Books">
+                <figcaption>
+                    Fantasy
+                </figcaption>
+            </figure>
+            <figure class="genreTile">
+                <img src="images/SciFi1.jpg" alt="Space Gate. Click to go to Science Fiction Books">
+                <figcaption>
+                    Science Fiction
+                </figcaption>
+            </figure>
+            <figure class="genreTile">
+                <img src="images/history1.jpg" alt="Old Photo Collage. Click to go to Historical Fiction Books">
+                <figcaption>
+                    Historical Fiction
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <div id="fullPage2">
+        <section>
+            <h1>Experience Amazing Adventures</h1>
+        </section>
+    </div>
+    <section id="photoGal">
+        <div id="photos">
+            <figure class="photoTile">
+                <img src="images/photo1.jpg" alt="An Image of People Reading">
+            </figure>
+            <figure class="photoTile">
+                <img src="images/photo2.jpg" alt="An Image of a woman reading">
+            </figure>
+            <figure class="photoTile">
+                <img src="images/photo3.jpg" alt="An Image trees by shop">
+            </figure>
+            <figure class="photoTile">
+                <img src="images/photo4.jpg" alt="An Image of book shelves">
+            </figure>
+            <figure class="photoTile">
+                <img src="images/photo5.jpg" alt="An Image of People people gathered in shop">
+            </figure>
+            <figure class="photoTile">
+                <img src="images/photo6.jpg" alt="An Image of People Studying">
+            </figure>
+        </div>
+        <button class="pageButton">
+            <p>See More Photos</p>
+        </button>
+    </section>
+    <div id="color-wrapper">
+        <footer>
+            <div id="topOfFooter">
+                <h1>Gift Cards</h1>
+                <h2>Click Below to Order</h3>
+                    <a href="https://finchlysquill.wordpress.com/">finchlysquill.wordpress.com</a>
+            </div>
+            <div id="mediaIcons">
+                <div>
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <div>
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div id="columns">
+                <div id="contact">
+                    <h3>Location</h3>
+                    <ul>
+                        <li>8888 Fake St.</li>
+                        <li>Phony City, AA 99999</li>
+                        <li>555-555-5555</li>
+                        <li>email@fake.com</li>
+                    </ul>
+                </div>
+                <div id="hours">
+                    <h3>Hours</h3>
+                    <ul>
+                        <li>Monday-Friday</li>
+                        <li>7:30 AM - 7:00 PM</li>
+                        <li>Saturday - Sunday</li>
+                        <li>9:00 am - 9:00 pm</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
 </body>
 
 </html>
