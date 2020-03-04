@@ -6,25 +6,28 @@
     --black: #150101;
 }
 
+html {
+    font-size: 62.5%; 
+  }
+
+h1, h2, h3, p, ul{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
-#welcome-section h1{
-    font-size: 4rem;
-    margin: .5rem;
-}
-#welcome-section h2{
-    margin: 0;
-    font-size: 2rem;
-}
+
+
 #navbar {
     display: flex;
     justify-content: flex-end;
     position: fixed;
     top: 0;
-    height: 3.75rem;
+    height: 5rem;
     background: var(--cream);
     width: 100%;
 }
@@ -32,21 +35,33 @@ body {
 #navlist {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 300px;
     margin-right: 1rem;
 }
 nav ul li {
     list-style: none;
-    font-size: 1.3rem;
+    border-right: 1px solid var(--black);
+    font-size: 2rem;
 }
+
+nav ul li:last-of-type {
+    border-right: none;
+}
+
 nav ul li a {
     text-decoration: none;
     Color: var(--black);
-    padding: 1.20rem 1.5rem;
+    padding: 1.20rem 1.7rem;
 }
 #navlist a:hover{
     background: var(--blue-greem);
     color: var(--cream)
+}
+
+#welcome-section h1{
+    font-size: 6rem;
+    margin: .5rem;
 }
 
 #welcome-section {
@@ -136,7 +151,7 @@ nav ul li a {
     margin-top: 5rem;
 }
 #contact-links a{
-    padding: 3rem;
+    padding: 1rem;
     text-decoration: none;
     color: var(--black);
     
@@ -147,18 +162,13 @@ footer {
     background-color: var(--tan);
 }
 
-@media (max-width: 75em) {
-    html{
-        font-size: 80%;
+@media (max-width: 1100px){
+    #contact-links a{
+        padding: 1rem;
+        line-height: 5rem;
+        text-decoration: none;
+        color: var(--black);
+        
     }
 }
-@media (max-width: 28.75em) {
-    html{
-        font-size: 80%;
-    }
-}
-@media (max-width: 28.75em) {
-    html{
-        font-size:80%;
-    }
-}
+
