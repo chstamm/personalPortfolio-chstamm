@@ -1,9 +1,24 @@
 :root {
-    --coral: #DB595C;
-    --blue-greem: #2C6565;
+    --pink: #ed008c;
+    --red: #e81123;
+    --orange: #ff8b00;
+    --yellow: #fff100;
+    --lgreen: #bbd80a;
+    --green: #009e49;
+    --bgreen: #00b294;
+    --lblue: #01bcf3;
+    --blue: #00188f;
+    --purple: #67217a;
     --cream: #FCF6D9;
-    --tan: #DDC094;
     --black: #150101;
+}
+html {
+    font-size: 62.5;
+}
+
+h1, h2, h3 {
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -20,24 +35,20 @@ header {
         rgba(0, 0, 0, 0.1),
         rgba(0, 0, 0, 0.7)
       ), url(Images/header_image.jpg) center center / cover no-repeat;
-   /*  display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
+  
+}
+
+#linkBack {
+    padding: 1rem;
 }
 
 #title {
     height: 100vh;
-/*     display: block;
- */    display: flex;
+ display: flex;
     align-items: center; 
     justify-content: center;
     flex-direction: column;
 }
-
-/* #linkBack {
-
-} */
 
 header h1{
     font-size: 4rem;
