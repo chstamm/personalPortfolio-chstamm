@@ -106,20 +106,17 @@ main {
 	flex-grow: 1;
 }
 
-#mainTopText {
-	line-height: 4rem;
-}
-
 main h2 {
 	color: var(--daccent);
 }
 
 main h3 {
 	color: var(--accent);
+	padding-top: 1.5rem;
 }
 
 ul {
-	padding: 1rem 0;
+	padding: 1rem 0 4rem 0;
 }
 
 ul li {
