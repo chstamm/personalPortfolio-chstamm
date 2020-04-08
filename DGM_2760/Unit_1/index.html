@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Joe's Bed and Breakfast</title>
-    
+
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
 
@@ -15,15 +15,15 @@
 <body>
     <header>
         <div id="headertext">
-        <h1 id="name">Joe's Bed and Breakfast</h1>
-        <h2 id="slogan">Best B&B Anywhere!</h2>
-    </div>
+            <h1 id="name">Joe's Bed and Breakfast</h1>
+            <h2 id="slogan">Best B&B Anywhere!</h2>
+        </div>
     </header>
     <main>
         <div id="mainTopText">
-        <h2>Welcome to Joe's!</h2>
-        <h3>What I learned</h3>
-    </div>
+            <h2>Welcome to Joe's!</h2>
+            <h3>What I learned</h3>
+        </div>
         <ul>
             <li>> Build a simple webpage with a header, main, and footer</li>
             <li>> Find and correctly resize and image to be loaded into the header using CSS</li>
@@ -33,6 +33,15 @@
             <li>> Push code to GitHub repository</li>
             <li>> Deploy a webpage using Netlify</li>
         </ul>
+        <div>
+            <h2>
+                Today is
+                <script>
+                    let dateToday = new Date()
+                    document.write(dateToday.toLocaleDateString())
+                </script>
+            </h2>
+        </div>
     </main>
     <footer>
         <p>Chelsea Stamm | Assignment for DGM2760 by Thor Anderson</p>
