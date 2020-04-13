@@ -87,7 +87,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -111,6 +111,13 @@ ol,
 ul {
   list-style: none;
 }
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 blockquote,
 q {
   quotes: none;
@@ -126,6 +133,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -134,4 +145,411 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+@media (min-width: 576px) {
+  .background-img {
+    background-image: url(/images/wood.jpg);
+  }
+}
+.nav1 {
+  background-color: #A0BD87;
+  display: flex;
+  align-items: center;
+}
+.nav1 .smLogoNav {
+  font-family: 'Dancing Script';
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+@media (min-width: 576px) {
+  .nav1 .smLogoNav {
+    display: none;
+  }
+}
+.nav1 .smLogoNav img {
+  height: 40px;
+  width: 40px;
+  margin-right: 1rem;
+}
+.nav1 .menuButton {
+  font-size: 2rem;
+}
+.nav1 div {
+  display: flex;
+  justify-content: center;
+}
+.nav1 div .CSnavEdit {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.nav1 div .CSnavEdit li {
+  padding: 1rem;
+  border-bottom: solid #556D3B 3px;
+}
+@media (min-width: 576px) {
+  .nav1 div .CSnavEdit li {
+    border-top: solid #556D3B 3px;
+  }
+}
+.nav1 div .CSnavEdit li:hover {
+  border-bottom: solid #C96F6F 3px;
+}
+@media (min-width: 576px) {
+  .nav1 div .CSnavEdit li:hover {
+    border-top: solid #C96F6F 3px;
+  }
+}
+.myBreadCrumb {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  background-color: #C96F6F;
+  color: #610000;
+  border-top: solid #556D3B 0.5rem;
+}
+@media (min-width: 576px) {
+  .myBreadCrumb {
+    padding: 1rem;
+  }
+}
+.myBreadCrumb ol {
+  margin: 0 auto;
+  background-color: #C96F6F;
+}
+.myBreadCrumb ol .myActive {
+  font-size: 1.5rem;
+  color: #2E0000;
+}
+@media (min-width: 576px) {
+  .myBreadCrumb ol .myActive {
+    font-size: 2.5rem;
+  }
+}
+.myBreadCrumb ol .myActive::before {
+  color: #940000;
+}
+header {
+  display: none;
+}
+@media (min-width: 576px) {
+  header {
+    display: block;
+    background-color: #2E0000;
+    color: #A0BD87;
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+  }
+  header div {
+    padding: 3rem 0 2rem 0;
+    display: flex;
+    align-items: center;
+  }
+  header div img {
+    width: 120px;
+    height: 120px;
+  }
+  header div h1 {
+    padding: 1rem;
+  }
+}
+main {
+  font-family: 'Raleway', sans-serif;
+}
+.myCarousel {
+  background-image: url(/images/wood.jpg);
+  border-top: solid #556D3B 1rem;
+  border-bottom: solid #556D3B 1rem;
+}
+.myServices {
+  background-color: #f0ddc5;
+  padding: 2rem 0;
+}
+.myServices h2 {
+  color: #f0ddc5;
+  background-color: #556D3B;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+.myServices .myTiles .myTile {
+  padding: 2rem;
+  text-align: center;
+}
+.myServices .myTiles .myTile h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 2rem 0;
+}
+@media (min-width: 576px) {
+  .myServices .myTiles .myTile h3 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .myServices .myTiles .myTile h3 {
+    font-size: 2.5rem;
+  }
+}
+.myServices .myTiles .myTile img {
+  border: solid #C96F6F 1rem;
+  border-radius: 25rem;
+  width: 300px;
+}
+@media (min-width: 576px) {
+  .myServices .myTiles .myTile img {
+    width: 100%;
+    border: solid #C96F6F 0.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .myServices .myTiles .myTile img {
+    border: solid #C96F6F 1rem;
+  }
+}
+.myServices .myTiles .myTile p {
+  padding: 2rem 0;
+  font-size: 1.5rem;
+}
+.highlights {
+  background-color: #f0ddc5;
+  padding: 2rem 0 4rem 0;
+}
+.highlights h2 {
+  color: #f0ddc5;
+  background-color: #556D3B;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.highlights .myTiles2 {
+  margin: 2rem 2rem 2rem 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5b9b9;
+}
+@media (min-width: 768px) {
+  .highlights .myTiles2 {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .highlights .myTiles2 img {
+    max-width: 250px;
+  }
+}
+.highlights .myTiles2 .tiles2Info {
+  padding: 1.5rem;
+}
+.highlights .myTiles2 .tiles2Info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 0 1rem 0;
+}
+.highlights .myTiles2 .tiles2Info p {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.highlights .myTiles2 .tiles2Info .myButtonStyle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.highlights .myTiles2 .tiles2Info button {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  color: #f0ddc5;
+  background-color: #C96F6F;
+  border: none;
+  border-radius: 0rem;
+}
+.lastTiles {
+  background-color: #f0ddc5;
+  border-bottom: solid #556D3B 1rem;
+  padding-bottom: 4rem;
+}
+.lastTiles .mySmallHeader {
+  color: #f0ddc5;
+  background-color: #556D3B;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .lastTiles .mySmallHeader {
+    display: none;
+  }
+}
+.lastTiles h2 {
+  color: #f0ddc5;
+  background-color: #556D3B;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.lastTiles .myMedHeaders {
+  display: none;
+}
+@media (min-width: 768px) {
+  .lastTiles .myMedHeaders {
+    display: block;
+  }
+}
+.lastTiles .myTiles3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #e5b9b9;
+  padding: 0;
+  margin: 1rem;
+}
+.lastTiles .myTiles3 button {
+  font-size: 1.5rem;
+  color: #f0ddc5;
+  background-color: #C96F6F;
+  border: none;
+  border-radius: 0rem;
+}
+.lastTiles .myTiles3 .myButtonStyle {
+  display: flex;
+  justify-content: center;
+}
+.lastTiles .myTiles3 button {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #f0ddc5;
+  background-color: #C96F6F;
+  border: none;
+  border-radius: 0rem;
+}
+.lastTiles .myTiles3 img {
+  width: 100%;
+  padding: 1rem;
+}
+.lastTiles .hours {
+  background-color: #2E0000;
+  color: #f0ddc5;
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  margin: 1rem;
+  padding: 2rem;
+  line-height: 4.5rem;
+}
+.formBackgroundColor {
+  background-color: #f0ddc5;
+}
+form {
+  max-width: 800px;
+  margin: auto;
+  padding: 3rem;
+  background-color: #e5b9b9;
+}
+form label {
+  font-size: 1.8rem;
+  font-family: 'Dancing Script', cursive;
+}
+form input {
+  margin: 1rem 0 3rem 0;
+}
+form select {
+  margin: 1rem 0 3rem 0;
+}
+form textarea {
+  margin: 1rem 0 3rem 0;
+}
+form button {
+  font-size: 1.5rem;
+  color: #f0ddc5;
+  background-color: #C96F6F;
+  border: none;
+  border-radius: 0rem;
+  padding: 1rem;
+}
+.servicesMain {
+  background-color: #f0ddc5;
+}
+.servicesMain .myRowContainer {
+  padding: 2rem;
+}
+.servicesMain .myRowContainer .myServicesRows {
+  padding: 2rem 0;
+  border-top: solid #556D3B 5px;
+}
+.servicesMain .myRowContainer .myServicesRows .serviceImg img {
+  border: solid #C96F6F 1rem;
+  border-radius: 25rem;
+  width: 300px;
+}
+@media (min-width: 576px) {
+  .servicesMain .myRowContainer .myServicesRows .serviceImg img {
+    width: 100%;
+    border: solid #C96F6F 0.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .servicesMain .myRowContainer .myServicesRows .serviceImg img {
+    border: solid #C96F6F 1rem;
+  }
+}
+.servicesMain .myRowContainer .myServicesRows .serviceInfo {
+  margin-bottom: 2rem;
+}
+.servicesMain .myRowContainer .myServicesRows .serviceInfo h2 {
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  margin: 3rem 0;
+}
+.servicesMain .myRowContainer .myServicesRows .serviceInfo p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.servicesMain .myRowContainer .myServicesRows .serviceBackwards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.servicesMain .myRowContainer .serviceLast {
+  border-bottom: solid #556D3B 5px;
+}
+footer {
+  background-image: url(/images/wood.jpg);
+  color: #f0ddc5;
+  font-family: 'Raleway', sans-serif;
+}
+footer div {
+  padding-top: 1rem;
+  background-color: #2E0000;
+}
+footer h2 {
+  color: #f0ddc5;
+  background-color: #556D3B;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+footer .followIcons {
+  padding: 1rem 0 5rem 0;
+  font-size: 5rem;
+}
+footer ul {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+footer ul li {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+footer ul li span {
+  padding-right: 1rem;
 }

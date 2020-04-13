@@ -1,0 +1,36 @@
+.servicesMain {
+    background-color: @accent4;
+    .myRowContainer {
+        padding: 2rem;
+        .myServicesRows {
+            padding: 2rem 0;
+            border-top: solid @accent2 5px;
+            .serviceImg {
+                img {
+                    .imgThumbnail()
+                }
+            }
+            .serviceInfo{
+                margin-bottom: 2rem;
+                h2{
+                    font-size: @h2;
+                    font-family: @logoFont;
+                    margin: 3rem 0; 
+                }
+                p{
+                    font-size: @body;
+                    line-height: 2rem;
+                }
+            }
+            .serviceBackwards {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: right;
+            }
+        }
+        .serviceLast {
+            border-bottom: solid @accent2 5px;
+        }
+    }
+}

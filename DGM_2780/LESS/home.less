@@ -1,0 +1,141 @@
+main {
+    font-family: @regular;
+}
+.myCarousel {
+    background-image: url(/images/wood.jpg);
+    border-top: solid @accent2 1rem;
+    border-bottom: solid @accent2 1rem;
+}
+
+.myServices {
+    background-color: @accent4;
+    padding: 2rem 0;
+    h2 {
+        .titleh2()
+    }
+    .myTiles {
+       .myTile {
+           padding: 2rem;
+           text-align: center;
+           h3{
+            @media @min576px {
+                font-size: @h3;
+               }
+            @media @min768px{
+                font-size: @h2;
+            }
+               font-family: @logoFont;
+               font-size: @h2;
+               font-weight: 600;
+               padding: 2rem 0;
+           }
+           img {
+            .imgThumbnail()
+           }
+           p {
+               padding: 2rem 0;
+               font-size: @body;
+           }
+       }
+    }
+}
+
+.highlights {
+    background-color: @accent4;
+    padding: 2rem 0 4rem 0;
+    h2 {
+        .titleh2();
+        margin-bottom: 2rem;
+    }
+    .myTiles2 {
+        @media @min768px{
+            flex-direction: row;
+        }
+        margin: 2rem 2rem 2rem 2rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: lighten(@accent1, 20%);
+        img {
+            @media @min768px{
+                max-width: 250px;
+            }
+        }
+        .tiles2Info {
+            padding: 1.5rem;
+            h3{
+                font-size: @h3;
+                font-weight: 600;
+                padding: 1rem 0 1rem 0;
+            }
+            p {
+                font-size: @body;
+                line-height: 1.8rem;
+            }
+            .myButtonStyle {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            button {
+                margin: 2rem 0 1rem 0;
+                .myButton()
+            }
+        }
+    }
+}
+
+.lastTiles {
+    background-color: @accent4;
+    border-bottom: solid @accent2 1rem;
+    padding-bottom: 4rem;
+    .mySmallHeader {
+        .titleh2();
+        @media @min768px {
+            display: none;
+        }
+    }
+    h2 {
+        .titleh2();
+        margin-bottom: 2rem;
+    } 
+    .myMedHeaders {
+        display: none;
+        @media @min768px {
+            display: block;
+        }
+    }
+
+    .myTiles3 {
+        display: flex;
+        flex-direction: column;
+        background-color: lighten(@accent1, 20%);
+        padding: 0;
+        margin: 1rem;
+        button {
+            .myButton();
+        }
+        .myButtonStyle {
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            margin: 1rem 0;
+            .myButton()
+        }
+        img{
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+    .hours {
+        background-color: @dbrown;
+        color: @accent4;
+        font-size: @h2;
+        font-family: @logoFont;
+        margin: 1rem;
+        padding: 2rem;
+        line-height: 4.5rem;
+    }
+    
+}
