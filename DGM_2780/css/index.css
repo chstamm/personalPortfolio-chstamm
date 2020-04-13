@@ -148,7 +148,7 @@ html {
 }
 @media (min-width: 576px) {
   .background-img {
-    background-image: url(/images/wood.jpg);
+    background-image: url(images/wood.jpg);
   }
 }
 .nav1 {
@@ -522,7 +522,7 @@ form button {
   border-bottom: solid #556D3B 5px;
 }
 footer {
-  background-image: url(/images/wood.jpg);
+  background-image: url(images/wood.jpg);
   color: #f0ddc5;
   font-family: 'Raleway', sans-serif;
 }
