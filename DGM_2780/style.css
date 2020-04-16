@@ -86,7 +86,7 @@ header {
     background: linear-gradient(
         rgba(0, 0, 0, 0.1),
         rgba(0, 0, 0, 0.7)
-      ), url(Images/header_image.jpg) center center / cover no-repeat;
+      ), url(images/hero-img2.jpg) center center / cover no-repeat;
   
 }
 
