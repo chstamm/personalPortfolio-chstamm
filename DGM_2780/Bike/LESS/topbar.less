@@ -1,0 +1,69 @@
+body {
+    font-family: 'Sen';
+}
+
+#top_bar{
+    background-color: @white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .responsive(1000px, {
+        flex-direction: row;
+        justify-content: space-around;
+    });
+    .logo{
+        padding: 2rem 0;
+        a {
+            font-family: @logoFont;
+            font-size:  @logoFontSize;
+            color: @accent1;
+        }
+    }
+
+    nav{
+        font-size: @NavFontSize;
+        ul {
+            display: flex;
+            li {
+                border-top: solid @accent2;
+                border-bottom: solid @accent2;
+                margin: .2rem;
+                padding: 1.5rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+    #icons{
+        display: flex;
+        .icon{
+            font-size: @buttonFontSize;
+            padding: .5rem 2rem;
+            margin: 1rem;
+            border-top: solid @accent3 .2rem;
+            border-bottom: solid @accent3 .2rem;
+            border-radius: 1rem;
+        }
+    }
+}
+
+//responsive
+    /* .responsive(450px, {
+        float: left;
+        margin-top: 10px;
+    }); */
+
+/* nav{
+        font-size: @NavFontSize;
+        margin-right: 1rem;
+        text-transform: uppercase;
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+                padding: 1rem;
+            }
+            li:hover {
+                background-color: @accent3;
+            }
+        }
+    } */

@@ -1,0 +1,46 @@
+// buttons
+.mainButton(){
+    background-color: @accent2;
+    border: none;
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: @white;
+    border: solid @white .2rem;
+    border-radius: 1rem;
+}
+.biggerButton(){
+    background-color: @accent2;
+    border: none;
+    font-size: @buttonFontSize;
+    padding: 1rem;
+    color: @white;
+    border: solid @white .3rem;
+    border-radius: 1rem;
+}
+
+// positioning
+.positionCenter() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+} //make containter relative
+.positionTopLeft() {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translate(-10%, -10%);
+    -ms-transform: translate(-10%, -10%);
+}   //make containter relative
+
+
+// Escapes 
+
+
+
+/* .responsive(@minWidth; @edits) {
+    @media only screen and (min-width: @minWidth) {
+        @edits();
+    }
+} */

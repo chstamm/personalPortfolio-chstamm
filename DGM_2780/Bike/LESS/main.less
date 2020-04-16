@@ -1,0 +1,95 @@
+main {
+    #hero1 {
+        background-color: @black;
+        position: relative;
+        button {
+            .positionTopLeft();
+            .mainButton();
+        }
+    }
+    #info {
+        background-color: @black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .info_column {
+            color: @white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 2rem;
+            h4 {
+                font-family: @bold;
+                font-size: @h4;
+            }
+            p {
+                line-height: 2rem;
+                font-size: @body;
+            }
+        }
+    }
+    .img_tiles1 {
+        background-color: @black;
+        font-size: @h2;
+        color: @white;
+        .img_tile {
+            position: relative;
+            h2 {
+                display: block;
+                .positionCenter();
+            }
+
+        }
+    }
+    #hero2 {
+        position: relative;
+        div {
+            color: white;
+            font-size: @h2;
+            .positionTopLeft();
+            button {
+                .biggerButton;
+            }
+        }
+    }
+
+    #articles {
+        background-color: @white;
+        h2{
+            font-size: @h2;
+            font-family: @bold;
+            text-align: center;
+            padding: 2rem;
+        }
+        .img_tiles2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .tile2 {
+                margin: 2rem;
+                text-align: center;
+                line-height: 2rem;
+                h3{
+                    font-size: @h3;
+                }
+                p {
+                    font-size: @body;
+                }
+            }
+        }
+    }
+
+    #hero3 {
+        position: relative;
+        div {
+            color: white;
+            font-size: @h2;
+            .positionTopLeft();
+            button {
+                .biggerButton;
+            }
+        }
+    }
+
+
+}
