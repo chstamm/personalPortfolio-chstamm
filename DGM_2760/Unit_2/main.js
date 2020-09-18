@@ -13,3 +13,8 @@ ${windowOffset}`
 
 watchWindow()
 
+let timeModded = `Page last modified ${document.lastModified}.` ;
+
+let docTitle = `This page is called ${document.title}`
+
+document.querySelector('#docInfo').innerText = `${timeModded} \n ${docTitle}.`
