@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Low Guessing Game</title>
+
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title"></h1>
+      <h2 id="slogan"></h2>
+    </header>
+    <main>
+      <div id="introTiles">
+        <div class="tile">
+          <h1>What I Learned</h1>
+          <ul>
+            <li>> Impliment Functions</li>
+            <li>> Implement a multi level if-then-else</li>
+            <li>> Use innerText to provide user feedback</li>
+            <li>> Implament a switch statement</li>
+            <li>> Dynamically load a graphic</li>
+            <li>> Create and append an image element</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h1>Instructions</h1>
+          <div id="instructions">
+            <p>
+              Pick a number between 1 and 15 in as few tries as possible. Then
+              you will be rewarded with a special surprise. If you would like to
+              try again, refresh the page.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h1>THE GAME</h1>
+      <div id="gameColumns">
+        <div class="column">
+            <h2>
+                Play
+            </h2>
+            <input id="guess"  type="number" placeholder="Add Number"> 
+            <button onclick="guessEval()">Guess</button>
+            <div></div>
+        </div>
+        <div class="column">
+            <h2>
+                Tries
+            </h2>
+            <div id="tries"></div>
+        </div>
+        <div class="column">
+            <h2>
+                Feedback
+            </h2>
+            <div id="feedback"></div>
+        </div>
+        <div class="column">
+            <h2>
+                Award
+            </h2>
+            <div></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Chelsea Stamm | Assignment for DGM2760 by Thor Anderson</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
