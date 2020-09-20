@@ -36,7 +36,7 @@ header {
 	min-height: 300px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url(/Unit_3/Images/headerImg.jpg);
+	background-image: url(./Images/headerImg.jpg);
 	color: var(--secondary);
 	display: flex;
 	justify-content: baseline;
