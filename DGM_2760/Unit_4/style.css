@@ -87,20 +87,30 @@ main h1 {
 
 .tile {
 	margin: 2.2rem;
-	max-width: 500px;
+	max-width: 450px;
 	background-color: var(--accent3);
 	padding: 2rem;
 	border-radius: 1rem;
 	box-shadow: 10px 10px var(--accent);
+	
+}
+
+#fortune { 
+	font-size: 2rem;
+	padding: 0 0 2rem 3rem;
 }
 
 
 button {
 	width: 200px;
+	margin-left: 2rem;
 	height: 4rem;
 	font-size: 2rem;
-	font-family: 'Audiowide';
-	background-color: var(--accent2);
+	font-family: 'Berkshire Swash', cursive;
+	color: var(--accent3);
+	background-color: var(--accent);
+	border-radius: 2rem;
+	
 }
 
 
