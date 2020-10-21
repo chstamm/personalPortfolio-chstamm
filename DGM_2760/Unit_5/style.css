@@ -1,0 +1,116 @@
+/* color variables */
+:root {
+	--background: #646469;
+    --secondary: #251f1c;
+    --accent:#527d5f;;
+	--accent2: #ad2220;
+	--accent3: #feb9a9;
+}
+
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	max-width: 1080px;
+	margin: auto;
+	font-family: 'Commissioner', sans-serif;
+	color: var(--secondary);
+}
+
+
+ul{
+	font-size: 2rem;
+	padding: 0 0 2rem 3rem;
+	line-height: 3rem;
+	
+}
+
+
+
+header {
+	min-height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(./images/apple_header.jpg);
+	color: var(--secondary);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	padding-bottom: 2.5rem;
+}
+
+
+
+header h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 4.5rem;
+	margin-top: 8rem;
+	padding: 1rem 3rem;
+}
+
+header h2 {
+	font-size: 3rem;
+	color: var(--secondary);
+	padding: 0rem 4rem;
+}
+
+#headertext {
+	padding: 15rem 3rem 3rem 3rem;
+	line-height: 4.5rem;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+}
+
+main h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 3rem;
+	color: var(--accent);
+	padding: 2rem;
+	line-height: 5rem;
+	
+}
+
+
+.buttonTile {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	max-width: 40rem;;
+	margin: 1rem 0 1rem 3rem;
+	height: 4rem;
+	font-size: 2rem;
+	color: var(--accent3);
+	background-color: var(--accent);
+	border-radius: 2rem;
+	
+}
+
+#col-2{
+	margin-right: 5rem;
+}
+
+#col-2 h2 {
+	color: var(--accent2);
+	font-size: 2rem;
+	padding: 0 2rem;
+}
+
+footer {
+	display: flex;
+ 	justify-content: center;
+	background-color: var(--accent);
+	color: white;
+  	padding: .5rem 0;
+	font-size: 1.5rem;
+}
+
+footer p{
+	padding: 1rem;
+}

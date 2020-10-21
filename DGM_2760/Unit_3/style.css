@@ -115,6 +115,10 @@ main h1 {
 	color: black;
 }
 
+main{
+	display: flex;
+}
+
 main h2 {
 	font-size: 3rem;
 	padding-bottom: 1rem;
