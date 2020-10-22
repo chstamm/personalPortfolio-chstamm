@@ -2,7 +2,7 @@
 :root {
 	--background: #646469;
     --secondary: #251f1c;
-    --accent:#527d5f;;
+    --accent:#214e28;;
 	--accent2: #ad2220;
 	--accent3: #feb9a9;
 }
@@ -93,16 +93,39 @@ button {
 }
 
 #col-2{
-	margin-right: 5rem;
+	margin-right: 2rem;
+	padding: 0 0 0 2rem;
 }
 
 #col-2 h2 {
+	font-family: 'Gloria Hallelujah', cursive;
 	color: var(--accent2);
+	font-size: 3rem;
+	padding: 2rem 0;
+}
+
+#results {
+	color: var(--accent);
+	background-color: var(--accent3);
+	padding: 2rem;
 	font-size: 2rem;
-	padding: 0 2rem;
+	line-height: 3rem;
+	margin-bottom: 2rem;
+}
+
+#results span {
+	color: var(--accent2);
+}
+
+#error {
+	font-size: 2rem;
+	color: var(--accent);
+	background-color: bisque;
+	padding: 1rem;
 }
 
 footer {
+	margin-top: 3rem;
 	display: flex;
  	justify-content: center;
 	background-color: var(--accent);
