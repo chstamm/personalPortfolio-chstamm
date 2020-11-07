@@ -51,7 +51,7 @@ document.getElementById("remove-end").onclick = () => {
     trees.pop();
     displayTrees();
   } else {
-    error.textContent = "Sorry, Can't remove last Tree!";
+    error.textContent = "Sorry, Can't redove last Tree!";
   }
 };
 
