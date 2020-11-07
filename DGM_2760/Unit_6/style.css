@@ -88,6 +88,23 @@ textarea {
 	
 }
 
+button {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 2rem;
+	background-color: #214e28;
+	color: white;
+	border: none; 
+	border-radius: 2rem;
+	padding: 1rem 2rem;
+	margin: 2rem;
+}
+
+#story {
+	margin: 0 2rem;
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
 footer {
 	margin-top: 3rem;
 	display: flex;
