@@ -1,0 +1,120 @@
+/* color variables */
+:root {
+	--background: #646469;
+    --secondary: #251f1c;
+    --accent:#214e28;;
+	--accent2: #ad2220;
+	--accent3: #feb9a9;
+}
+
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	max-width: 1080px;
+	margin: auto;
+	font-family: 'Commissioner', sans-serif;
+	color: var(--secondary);
+}
+
+
+ul{
+	font-size: 2rem;
+	padding: 0 0 2rem 3rem;
+	line-height: 3rem;
+	
+}
+
+
+
+header {
+	min-height: 340px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(./imgs/chalkboard.jpg);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	padding: 4rem 10rem;
+}
+
+
+
+header h1 {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 6rem;
+	margin-top: 8rem;
+	padding-bottom: 1rem;
+}
+
+header h2 {
+	font-size: 3rem;
+	
+	
+}
+
+#headertext {
+	padding: 15rem 3rem 3rem 3rem;
+	line-height: 4.5rem;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+}
+
+main h1 {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 3rem;
+	color: var(--accent);
+	padding: 2rem;
+	line-height: 5rem;
+	
+}
+
+
+#columns {
+	display: flex;
+}
+
+textarea {
+	margin-left: 2rem;
+	max-width: 100%;
+  width: 100%;
+  height: 100px
+	
+}
+
+button {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 2rem;
+	background-color: #214e28;
+	color: white;
+	border: none; 
+	border-radius: 2rem;
+	padding: 1rem 2rem;
+	margin: 2rem;
+}
+
+#story {
+	margin: 0 2rem;
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+footer {
+	margin-top: 3rem;
+	display: flex;
+ 	justify-content: center;
+	background-color: var(--accent);
+	color: white;
+  	padding: .5rem 0;
+	font-size: 1.5rem;
+}
+
+footer p{
+	padding: 1rem;
+}
