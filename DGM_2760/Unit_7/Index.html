@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pizza Time!</title>
+    <title>Pizza!</title>
 
     <link href="reset.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap"
       rel="stylesheet"
@@ -30,10 +34,48 @@
           <li>> Access the Methods of an object</li>
           <li>> Use Math Operators</li>
           <li>> Use Template Literals</li>
-          <li>> Use querySelector and textContent to dynamically change text on the screen.</li>
+          <li>
+            > Use querySelector and textContent to dynamically change text on
+            the screen.
+          </li>
         </ul>
       </div>
-      
+      <div id="pizzaTiles">
+        <div class="tile">
+          <h1>Crust Options</h1>
+          <input type="radio" id="thin" name="crust" value="thin" checked>
+          <label for="thin">Thin</label>
+          <input type="radio" id="thick" name="crust" value="thick">
+          <label for="thick">Thick</label>
+        </div>
+        <div class="tile">
+          <h1>Topping Option</h1>
+          <input type="radio" id="sausage" name="topping" value="sausage" checked>
+          <label for="sausage">Sausage</label>
+          <input type="radio" id="pepperoni" name="topping" value="pepperoni">
+          <label for="pepperoni">Pepperoni</label>
+        </div>
+        <div class="tile">
+          <h1>Size Options</h1>
+          <input type="radio" id="small" name="size" value="small" checked>
+          <label for="small">Small</label>
+          <input type="radio" id="large" name="size" value="large">
+          <label for="large">Large</label>
+          
+        </div>
+        <div class="tile">
+          <h1>Time To Eat</h1>
+          <button id=buildPizza>Build Pizza</button>
+        </div>
+        <div class="tile">
+          <h1>Shipping List</h1>
+          <button id=list>Shopping List</button>
+        </div>
+      </div>
+      <div id="message">
+        <h1>Message for User</h1>
+        <p id=userMessage></p>
+      </div>
     </main>
     <footer>
       <p>Chelsea Stamm | Assignment for DGM2760 by Thor Anderson</p>

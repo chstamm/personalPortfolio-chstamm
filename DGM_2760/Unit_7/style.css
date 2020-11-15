@@ -2,7 +2,7 @@
 :root {
 	--background: #646469;
     --secondary: #251f1c;
-    --accent:#214e28;;
+    --accent:#738c71;
 	--accent2: #ad2220;
 	--accent3: #feb9a9;
 }
@@ -32,7 +32,7 @@ header {
 	min-height: 340px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url(./imgs/chalkboard.jpg);
+	background-image: url(./imgs/sPizza.jpg);
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -44,7 +44,7 @@ header {
 
 
 header h1 {
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Calligraffitti', cursive;
 	font-size: 6rem;
 	margin-top: 8rem;
 	padding-bottom: 1rem;
@@ -63,11 +63,11 @@ header h2 {
 
 main {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 }
 
 main h1 {
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Calligraffitti', cursive;
 	font-size: 3rem;
 	color: var(--accent);
 	padding: 2rem;
@@ -75,35 +75,38 @@ main h1 {
 	
 }
 
-
-#columns {
+#pizzaTiles {
 	display: flex;
-}
-
-textarea {
-	margin-left: 2rem;
-	max-width: 100%;
-  width: 100%;
-  height: 100px
+	flex-wrap: wrap;
 	
 }
 
-button {
-	font-family: 'Fredericka the Great', cursive;
-	font-size: 2rem;
-	background-color: #214e28;
-	color: white;
-	border: none; 
-	border-radius: 2rem;
-	padding: 1rem 2rem;
+.tile {
+	background-color: var(--accent);
+	padding: 1rem 1rem 3rem 1rem;
 	margin: 2rem;
 }
 
-#story {
-	margin: 0 2rem;
+label {
 	font-size: 2rem;
-	line-height: 2.5rem;
+	color: white;
 }
+
+.tile h1{
+	padding: 1rem 1rem 2rem 1rem;
+	color: var(--accent3);
+}
+
+#message p {
+	margin: 2rem;
+	font-size: 2rem;
+}
+
+#message {
+	display: flex;
+	flex-direction: column;
+}
+
 
 footer {
 	margin-top: 3rem;
