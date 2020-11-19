@@ -2,9 +2,11 @@
 :root {
 	--background: #646469;
     --secondary: #251f1c;
-    --accent:#738c71;
-	--accent2: #ad2220;
-	--accent3: #feb9a9;
+	--accent:#7a533b;
+	--accent2: #988985;
+	--accent3: #eaddd0;
+
+
 }
 
 
@@ -32,7 +34,7 @@ header {
 	min-height: 340px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url(./imgs/sPizza.jpg);
+	background-image: url(./imgs/grantsTombHeader.jpg);
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -44,7 +46,7 @@ header {
 
 
 header h1 {
-	font-family: 'Calligraffitti', cursive;
+	font-family: 'Big Shoulders Inline Text', cursive;
 	font-size: 6rem;
 	margin-top: 8rem;
 	padding-bottom: 1rem;
@@ -67,7 +69,7 @@ main {
 }
 
 main h1 {
-	font-family: 'Calligraffitti', cursive;
+	font-family: 'Big Shoulders Inline Text', cursive;
 	font-size: 3rem;
 	color: var(--accent);
 	padding: 2rem;
@@ -75,7 +77,32 @@ main h1 {
 	
 }
 
+#stem, button, .feedback {
+	width: 100%;
+	margin: 0 auto;
+	height: 40px;
+	font-size: 2rem;
+	padding: 1rem;
+}
 
+#stem {
+	background-color: var(--accent2);
+	border: black 1px solid;
+	margin-bottom: 2rem;
+	color: white;
+
+}
+
+button {
+	background-color: var(--accent3);
+	border: black 1px solid;
+}
+
+.feedback {
+	background-color:#f7c4d3;
+	border: black 1px solid;
+	margin-top: 2rem;
+}
 
 
 footer {
@@ -86,6 +113,7 @@ footer {
 	color: white;
   	padding: .5rem 0;
 	font-size: 1.5rem;
+
 }
 
 footer p{
