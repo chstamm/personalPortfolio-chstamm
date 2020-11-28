@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grant's Tomb</title>
+
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@500&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title"></h1>
+      <h2 id="slogan"></h2>
+    </header>
+    <main>
+      <div class="introTile">
+        <h1>What I Learned</h1>
+        <ul>
+          <li>> Create an external JSON file</li>
+          <li>> Load the JSON file using the Fetch API</li>
+          <li>> How to use a try...catch block</li>
+          <li>> How to use an async...await to make asychronous function calls</li>
+          <li>> How to retrieve and store resolved Promise data</li>
+          <li>> Display data from the JSON file on the web page using three different buttons</li>
+        </ul>
+      </div>
+      <div id="hotelTile">
+        <h1>Select a Hotel</h1>
+        <ul>
+          <li><a href="#" id="marriott">Marriott</a></li>
+          <li><a href="#" id="sheraton">Sheraton</a></li>
+          <li><a href="#" id="hilton">Hilton</a></li>
+        </ul>
+        <h2 id="hoteName">Hotel: </h2>
+        <h3>Address: <span id="address"></span></h3>
+        <p>Number of Rooms: <span id="rooms"></span></p>
+        <p>Gym Available: <span id="gym"></span></p>
+        <p>Room Types: <span id="type"></span></p>
+        <img id="picture">
+      </div>
+
+    <footer>
+      <p>Chelsea Stamm | Assignment for DGM2760 by Thor Anderson</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

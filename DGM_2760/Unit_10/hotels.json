@@ -1,0 +1,28 @@
+{
+    "hotels":[
+        {
+            "name": "Marriott",
+            "rooms": 50,
+            "gym": "Yes",
+            "roomTypes": ["King", "Queen", "Double"],
+            "address": "3256 Seashell Blvd.",
+            "picture": "hotel1.jpg"
+        },
+        {
+            "name": "Sheraton",
+            "rooms": 85,
+            "gym": "No",
+            "roomTypes": ["Quad", "Triple", "Double", "Single"],
+            "address": "8295 Norman ST SE",
+            "picture": "hotel2.jpg"
+        },
+        {
+            "name": "Hilton",
+            "rooms": 50,
+            "gym": "Yes",
+            "roomTypes": ["Presidental Suite", "Queen", "Double", "Single"],
+            "address": "1564 Rose Ave.",
+            "picture": "hotel3.jpg"
+        }
+    ]
+}
