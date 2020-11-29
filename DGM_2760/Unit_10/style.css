@@ -3,7 +3,7 @@
 	--background: #646469;
     --secondary: #251f1c;
 	--accent:#7a533b;
-	--accent2: #988985;
+	--accent2: #bfdaee;
 	--accent3: #eaddd0;
 
 
@@ -21,10 +21,10 @@ body {
 }
 
 
-ul{
-	font-size: 2rem;
+#firstList {
+	font-size: 1.5rem;
 	padding: 0 0 2rem 3rem;
-	line-height: 3rem;
+	line-height: 2rem;
 	
 }
 
@@ -34,7 +34,7 @@ header {
 	min-height: 340px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url(./imgs/grantsTombHeader.jpg);
+	background-image: url(./imgs/header_hotel.jpg);
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -46,7 +46,7 @@ header {
 
 
 header h1 {
-	font-family: 'Big Shoulders Inline Text', cursive;
+	font-family: 'Elsie Swash Caps', cursive;
 	font-size: 6rem;
 	margin-top: 8rem;
 	padding-bottom: 1rem;
@@ -69,40 +69,56 @@ main {
 }
 
 main h1 {
-	font-family: 'Big Shoulders Inline Text', cursive;
+	font-family: 'Elsie Swash Caps', cursive;
 	font-size: 3rem;
 	color: var(--accent);
-	padding: 2rem;
+	padding: 1rem;
 	line-height: 5rem;
+}
+
+main h2 {
+	font-family: 'Elsie Swash Caps', cursive;
+	font-size: 3rem;
+	color: var(--accent);
+	padding: 1rem;
+	line-height: 5rem;
+}
+
+main h3 {
+	padding: 1rem;
+	font-size: 3rem;
+}
+
+p {
+	padding-left: 1rem;
+	line-height: 4rem;
+	font-size: 2rem;
+}
+
+#hotelList {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 3rem;;
+}
+
+#hotelList li {
+	width: 125px;
+	font-size: 2rem;
+	margin-left: 3rem;
+	padding: 2rem;
+	background-color: var(--accent2);
+	display: flex;
+	justify-content: center;
 	
 }
 
-#stem, button, .feedback {
-	width: 100%;
-	margin: 0 auto;
-	height: 40px;
-	font-size: 2rem;
-	padding: 1rem;
+#hotelList li a{
+	color: var(--secondary);
 }
 
-#stem {
-	background-color: var(--accent2);
-	border: black 1px solid;
-	margin-bottom: 2rem;
-	color: white;
 
-}
 
-button {
-	background-color: var(--accent3);
-	border: black 1px solid;
-}
 
-.feedback {
-	background-color:#f7c4d3;
-	border: black 1px solid;
-	margin-top: 2rem;
-}
 
 
 footer {
