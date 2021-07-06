@@ -145,6 +145,8 @@ main {
     justify-content: center;
 }
 
+
+
 .unitTile {
     width: 200px;
     height: 200px;
@@ -181,7 +183,7 @@ footer {
     margin: auto;
     padding: 2rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: var(--cream);
 }
 
